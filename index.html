@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +69,7 @@
   <!-- Skills Section -->
   <section id="skills" class="skills">
     <div class="skills-container">
-      <h2 class="section-title">My  Skills</h2>
+      <h2 class="section-title">My Skills</h2>
       <div class="skills-grid">
         <div class="skill-card">
           <div class="skill-icon">💻</div>
@@ -93,19 +94,19 @@
   <section id="projects" class="projects">
     <h2 class="section-title">Projects</h2>
     <div class="projects-grid">
-    <div class="project-card">
-    <div class="project-image">ML Price Prediction</div>
-    <div class="project-content">
-    <h3>Area Price Prediction using Machine Learning</h3>
-    <p>A predictive model that estimates real estate prices based on area and location data using regression techniques.</p>
-    <ul class="project-features">
-      <li>Trained using linear regression and real-world datasets</li>
-      <li>Built with Python, Pandas, Scikit-learn</li>
-      <li>Deployed using Flask with interactive input/output interface</li>
-    </ul>
-    <a href="#" class="project-button">View Project</a>
-  </div>
-</div>
+      <div class="project-card">
+        <div class="project-image">ML Price Prediction</div>
+        <div class="project-content">
+          <h3>Area Price Prediction using Machine Learning</h3>
+          <p>A predictive model that estimates real estate prices based on area and location data using regression techniques.</p>
+          <ul class="project-features">
+            <li>Trained using linear regression and real-world datasets</li>
+            <li>Built with Python, Pandas, Scikit-learn</li>
+            <li>Deployed using Flask with interactive input/output interface</li>
+          </ul>
+          <a href="#" class="project-button">View Project</a>
+        </div>
+      </div>
 
       <div class="project-card">
         <div class="project-image">Smart Parking</div>
@@ -128,7 +129,6 @@
     <div class="resume-container">
       <h1>My Professional Resume</h1>
       <a class="resume-download" href="assets/resume.pdf" download>Download Resume</a>
-    
     </div>
   </section>
 
@@ -136,18 +136,18 @@
   <section id="contact" class="contact">
     <div class="contact-container">
       <h2 class="section-title">Contact Me</h2>
-      <form class="contact-form">
+      <form class="contact-form" action="https://formspree.io/f/mrblgeda" method="POST">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required />
+          <input type="text" name="name" id="name" placeholder="Your Name" required />
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your Email" required />
+          <input type="email" name="email" id="email" placeholder="Your Email" required />
         </div>
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+          <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
         </div>
         <button type="submit" class="submit-button">Send Message</button>
       </form>
@@ -160,11 +160,7 @@
   </footer>
 
   <script src="js/script.js"></script>
-  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
-  <script type="text/javascript">
-    (function(){
-      emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
-    })();
-  </script>
+  <!-- Optional: Toasts (UI Alert feedback) -->
+  <div id="toast" class="toast hidden">Message sent successfully!</div>
 </body>
 </html>
