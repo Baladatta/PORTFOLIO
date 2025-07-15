@@ -35,7 +35,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Form Submission using Firebase Cloud Function
+// Form Submission using Formspree
 document.addEventListener('DOMContentLoaded', () => {
     createParticles();
 
@@ -55,32 +55,31 @@ document.addEventListener('DOMContentLoaded', () => {
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
 
-            // Replace with your actual Firebase project ID
-            fetch('https://us-central1-my-portfolio-123.cloudfunctions.net/sendContactMail', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, email, message })
-            })
-            .then(response => {
+            fetch("https://formspree.io/f/mrblgeda", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json'
+                },
+                body: formData
+            }).then(response => {
                 if (response.ok) {
-                    alert('Thank you for your message! I\'ll get back to you soon.');
+                    alert("Thank you for your message! I’ll get back to you soon.");
                     this.reset();
                 } else {
-                    alert('Failed to send message. Please try again later.');
+                    alert("Failed to send message. Please try again later.");
                 }
                 submitButton.textContent = originalText;
                 submitButton.disabled = false;
-            })
-            .catch(error => {
-                alert('Failed to send message. Please try again later.');
-                console.error('Firebase error:', error);
+            }).catch(error => {
+                console.error("Form error:", error);
+                alert("Something went wrong. Please try again later.");
                 submitButton.textContent = originalText;
                 submitButton.disabled = false;
             });
         });
     }
 
-    // Add loading animation
+    // Page load fade-in
     document.body.style.opacity = '0';
     setTimeout(() => {
         document.body.style.transition = 'opacity 1s ease';
@@ -117,16 +116,16 @@ document.querySelectorAll('.skill-card, .project-card').forEach(card => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
+
         const rotateX = (y - centerY) / 10;
         const rotateY = (centerX - x) / 10;
-        
+
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
     });
-    
+
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
     });
