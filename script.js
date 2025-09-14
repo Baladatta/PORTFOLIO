@@ -151,3 +151,20 @@ setInterval(() => {
     gradientAngle += 1;
     document.documentElement.style.setProperty('--gradient-angle', gradientAngle + 'deg');
 }, 50);
+
+// Resume Modal Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const viewResumeBtn = document.getElementById('viewResumeBtn');
+    const resumeModal = document.getElementById('resumeModal');
+    const closeResumeModal = document.getElementById('closeResumeModal');
+    if(viewResumeBtn && resumeModal && closeResumeModal) {
+        viewResumeBtn.onclick = () => {
+            resumeModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        };
+        closeResumeModal.onclick = () => {
+            resumeModal.style.display = 'none';
+            document.body.style.overflow = '';
+        };
+    }
+});
