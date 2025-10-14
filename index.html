@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>R.Baladatta - 3D Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Particles Background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo logo-link" aria-label="R. Baladatta home">
+        <span class="logo-badge">
+          <img src="logo.jpg" alt="R. Baladatta" class="logo-img" />
+        </span>
+        <span class="logo-text">R. Baladatta</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="floating-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <div class="hero-content">
+      <h1>R.Baladatta</h1>
+      <p>Passionate Web Developer & Aspiring SDE | Exploring AI Tools</p>
+
+      <a href="#about" class="cta-button">Explore My Work</a>
+    </div>
+  </section>
+
+<!-- About Section -->
+<section id="about" class="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-content">
+    <div class="about-image">
+      <img src="profile.jpg" alt="R.Baladatta" class="circular-image" />
+    </div>
+    <div class="about-text">
+      <h1>
+        I’m R. Baladatta, a passionate Web Developer and technology enthusiast who loves crafting dynamic and responsive web applications. 
+        I focus on building seamless user experiences by blending clean design with robust functionality across both frontend and backend.
+      </h1>
+      <h1>
+        Alongside web development, I’m deeply interested in exploring AI tools, learning advanced algorithms, and solving Data Structures and Algorithms (DSA) problems using Python to enhance my problem-solving mindset. 
+        I believe in writing efficient, optimized, and scalable code that bridges creativity with logic.
+      </h1>
+      <h1>
+        Currently, I’m expanding my knowledge in DevOps to strengthen my understanding of deployment pipelines, automation, and cloud infrastructure—preparing myself for full-stack and future software development roles. 
+        My ultimate goal is to integrate AI, automation, and development practices to build intelligent, high-performance solutions.
+      </h1>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Skills Section -->
+<section id="skills" class="skills">
+  <div class="skills-container">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-grid">
+      
+      <div class="skill-card">
+        <div class="skill-icon">💻</div>
+        <h3>Web Development</h3>
+        <p>HTML, CSS</p>
+        <p>Building responsive and interactive web interfaces with clean design and functionality.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🐍</div>
+        <h3>Programming Languages</h3>
+        <p>C, Python, Java</p>
+        <p>Strong in writing optimized, modular, and efficient code with problem-solving focus.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🤖</div>
+        <h3>AI & Machine Learning</h3>
+        <p>Learning algorithms, data preprocessing, and Creating prompt for AI-driven solutions.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🛠️</div>
+        <h3>Tools & Technologies</h3>
+        <p>VS Code, Git, GitHub, MS Excel</p>
+        <p>Experienced in version control, data handling, and collaborative development workflows.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image">
+          <img src="area.jpg" alt="Area Price Prediction" />
+        </div>
+        <div class="project-content">
+          <h3>Area Price Prediction using Machine Learning</h3>
+          <p>A predictive model that estimates real estate prices based on area and location data using regression techniques.</p>
+          <ul class="project-features">
+            <li>Trained using linear regression and real-world datasets</li>
+            <li>Built with Python, Pandas, Scikit-learn</li>
+            <li>Deployed using Flask with interactive input/output interface</li>
+          </ul>
+          <a href="https://github.com/Baladatta/Area-price-prediction-1" class="project-button" target="_blank" rel="noopener noreferrer">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="parking.jpg" alt="Smart Parking" />
+        </div>
+        <div class="project-content">
+          <h3>Smart Parking System</h3>
+          <p>Flask-based parking system with email reminders, QR payments, and dashboard.</p>
+          <ul class="project-features">
+            <li>Admin/user roles</li>
+            <li>Zone-based slot booking</li>
+            <li>UPI payments + email alerts</li>
+          </ul>
+          <a href="#" class="project-button">View Project</a>
+        </div>
+      </div>
+
+      <!-- Weather App (placeholder link - deployed link will be added later) -->
+      <div class="project-card">
+        <div class="project-image weather">
+          <img src="weather.jpg" alt="Weather App" />
+        </div>
+        <div class="project-content">
+          <h3>Weather App (HTML, CSS, API, Python)</h3>
+          <p>Lookup current weather by city. Frontend uses OpenWeatherMap API. Optional Python Flask proxy available.</p>
+          <ul class="project-features">
+            <li>City search and current temperature, conditions</li>
+            <li>Uses OpenWeatherMap API</li>
+            <li>Server proxy recommended to keep API keys private</li>
+          </ul>
+          <a href="https://github.com/Baladatta/weather-prediction" class="project-button" target="_blank" rel="noopener noreferrer">View Project</a>
+        </div>
+      </div>
+
+      <!-- Health App (placeholder link - deployed link will be added later) -->
+      <div class="project-card">
+        <div class="project-image health">
+          <img src="health.jpg" alt="Health App" />
+        </div>
+        <div class="project-content">
+          <h3>Health App (BMI + Chatbot)</h3>
+          <p>BMI calculator for students and a lightweight health chatbot with common advice about exercise and nutrition.</p>
+          <ul class="project-features">
+            <li>Interactive BMI calculator with category feedback</li>
+            <li>Chatbot answers common health questions (rule-based)</li>
+            <li>Client-side; can be connected to backend AI later</li>
+          </ul>
+          <a href="#" class="project-button">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="resume">
+    <div class="resume-container">
+      <h1>My Professional Resume</h1>
+        <a class="resume-view" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+        <a class="resume-download" href="resume.pdf" download>Download Resume</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="contact-container">
+      <h2 class="section-title">Contact Me</h2>
+      <form class="contact-form" action="https://formspree.io/f/mrblgeda" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 R.Baladatta. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Optional: Toasts (UI Alert feedback) -->
+</body>
+</html>
+
+
+
